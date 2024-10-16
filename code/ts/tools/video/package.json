@@ -1,0 +1,19 @@
+{
+  "name": "video",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "animejs": "^3.2.2",
+    "roughjs": "^4.6.6"
+  },
+  "scripts": {
+    "serve": "bun run server.ts",
+    "bld": "bun build index.ts --outdir static index.js"
+  }
+}

@@ -1,7 +1,7 @@
 const std = @import("std");
 const testing = std.testing;
 
-const MockBlockDevice = struct {
+pub const MockBlockDevice = struct {
     pub fn init(allocator: std.mem.Allocator, block_size: usize, count_of_blocks: usize) !MockBlockDevice {
         const data_size = block_size * count_of_blocks;
         const data = try allocator.alloc(u8, data_size);
@@ -37,7 +37,7 @@ const MockBlockDevice = struct {
 
     block_size: usize,
     count_of_blocks: usize,
-    data: []u8, // Динамический массив, размер которого зависит от block_size и count_of_blocks
+    data: []u8,
 };
 
 // test
